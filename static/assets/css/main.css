@@ -213,6 +213,7 @@ footer section {
   header {
     max-height: 44px;
     overflow: hidden;
+    transition: max-height .3s ease-in-out;
   }
 
   nav ul, nav ul section, .standard-p, .standard-p.reverse {
@@ -311,6 +312,7 @@ footer section {
     height: 4px;
     right: 3px;
     border-radius: 2px;
+    transition: all .3s ease-in-out;
   }
 
   .menu-icon span:nth-child(1) {
@@ -327,5 +329,19 @@ footer section {
 
   header:has(#nav-toggle:checked) {
     max-height: 350px;
+  }
+
+  header:has(#nav-toggle:checked) .menu-icon span:nth-child(1)  {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+
+  header:has(#nav-toggle:checked) .menu-icon span:nth-child(2)  {
+    opacity: 0;
+  }
+
+  header:has(#nav-toggle:checked) .menu-icon span:nth-child(3)  {
+    transform: rotate(-45deg);
+    top: 20px;
   }
 }
