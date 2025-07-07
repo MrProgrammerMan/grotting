@@ -1,15 +1,22 @@
 :root {
   --background: #fff;
+  --background-dark: #121212;
   --text: #000;
+  --text-light: #fff;
 }
 
 body {
   margin: 0;
-  background-color: var(--background);
+  background-color: var(--background-dark);
+  background-image: url('/static/assets/imgs/homepage_background.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li, label, input {
   color: var(--text);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 header {
@@ -21,6 +28,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   width: 100%;
   background-color: var(--background);
+  z-index: 10;
 }
 
 nav {
@@ -81,4 +89,74 @@ header .logo.expanded img {
 
 main {
   margin-top: 170px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 10% repeat(10, 1fr) 10%;
+}
+
+main > * {
+  grid-column: 2 / 12;
+}
+
+main section.title {
+  width: 50%;
+  margin: 8em auto;
+}
+
+main section.title .logo {
+  width: 100%;
+  filter: invert(1);
+}
+
+main section.title p {
+  font-size: 2em;
+  margin-top: 1em;
+  color: var(--text-light);
+  text-shadow: 2px 2px #00000080;
+}
+
+main section.floating-p {
+  width: 100%;
+  margin: 40vh 0;
+}
+
+main section.floating-p > * {
+  width: 30%;
+  color: var(--text-light);
+}
+
+main section.floating-p > p {
+  font-size: 1.5em;
+}
+
+main section.floating-p > h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+main section.floating-p.left > * {
+  margin-right: auto;
+}
+
+main section.floating-p.right > * {
+  margin-left: auto;
+}
+
+main article.content {
+  grid-column: 1 / 13;
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2em;
+  background-color: var(--background);
+}
+
+main article.content > .left {
+  grid-column: 1 / 6;
+}
+
+main article.content > .right {
+  grid-column: 6 / 11;
 }
