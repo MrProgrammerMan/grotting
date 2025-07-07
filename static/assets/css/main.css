@@ -59,7 +59,6 @@ nav ul li {
 nav a {
   height: 44px;
   padding: 0 auto;
-  display: inline-block;
   display: flex;
   align-items: center;
 }
@@ -196,4 +195,81 @@ footer section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  header, nav, nav ul, nav ul li, nav ul li a, nav ul section, main section.title, .standard-p > div, footer, main section.floating-p > *, main article.content {
+    width: 100%;
+  }
+
+  header {
+    height: 44px;
+    overflow: hidden;
+  }
+
+  nav ul, nav ul section, .standard-p, .standard-p.reverse {
+    flex-direction: column;
+  }
+
+  header .logo {
+    display: none;
+  }
+
+  nav a {
+    justify-content: center;
+  }
+
+  main {
+    margin-top: 48px;
+  }
+
+  main > *, main article.content > section, footer section {
+    width: 96%;
+  }
+
+  main section.title {
+    margin: 0;
+    padding: 3em 0;
+  }
+
+  main section.floating-p > * {
+    text-align: center;
+  }
+
+  main section.floating-p > p {
+    font-size: 1em;
+  }
+
+  main article.content {
+    padding: 0;
+  }
+
+  main article.content > section {
+    margin: 0 auto;
+  }
+  
+  footer {
+    flex-direction: column;
+  }
+
+  footer section {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  footer section p {
+    margin: .5em 0;
+  }
+
+  footer section h2 {
+    margin: 1em 0;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
 }
