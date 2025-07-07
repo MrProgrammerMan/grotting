@@ -94,6 +94,14 @@ header .logo.expanded img {
   margin: 3px;
 }
 
+.mobile-logo {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
 main {
   margin-top: 170px;
   width: 100%;
@@ -203,7 +211,7 @@ footer section {
   }
 
   header {
-    height: 44px;
+    max-height: 44px;
     overflow: hidden;
   }
 
@@ -213,6 +221,19 @@ footer section {
 
   header .logo {
     display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+    height: 44px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-logo img {
+    height: 42px;
+    margin: 1px;
   }
 
   nav a {
@@ -271,5 +292,40 @@ footer section {
 
   p {
     font-size: 1em;
+  }
+
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+  }
+
+  .menu-icon > span {
+    display: inline-block;
+    position: fixed;
+    background-color: black;
+    width: 38px;
+    height: 4px;
+    right: 3px;
+    border-radius: 2px;
+  }
+
+  .menu-icon span:nth-child(1) {
+    top: 9px;
+  }
+
+  .menu-icon span:nth-child(2) {
+    top: 20px;
+  }
+
+  .menu-icon span:nth-child(3) {
+    top: 31px;
+  }
+
+  header:has(#nav-toggle:checked) {
+    max-height: 350px;
   }
 }
