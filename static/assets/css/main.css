@@ -19,6 +19,14 @@ h1, h2, h3, h4, h5, h6, p, a, li, label, input {
   font-family: 'Times New Roman', Times, serif;
 }
 
+h2 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -90,14 +98,11 @@ header .logo.expanded img {
 main {
   margin-top: 170px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: 10% repeat(10, 1fr) 10%;
 }
 
 main > * {
-  grid-column: 2 / 12;
+  width: 80%;
+  margin: 0 auto;
 }
 
 main section.title {
@@ -145,18 +150,34 @@ main section.floating-p.right > * {
 }
 
 main article.content {
-  grid-column: 1 / 13;
-  padding: 0 10%;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 2em;
+  width: 80%;
+  padding: 5em 10%;
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
 }
 
-main article.content > .left {
-  grid-column: 1 / 6;
+main article.content > section {
+  width: 100%;
 }
 
-main article.content > .right {
-  grid-column: 6 / 11;
+.standard-p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.standard-p > div {
+  width: 45%;
+}
+
+.standard-p img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+.standard-p.reverse {
+  flex-direction: row-reverse;
 }
