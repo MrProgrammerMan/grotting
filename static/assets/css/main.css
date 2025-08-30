@@ -16,7 +16,9 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, li, label, input {
   color: var(--text);
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
 h2 {
@@ -61,6 +63,11 @@ nav a {
   padding: 0 auto;
   display: flex;
   align-items: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 nav ul section {
@@ -203,6 +210,41 @@ footer section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 1079px) {
+  header .logo.expanded {
+    max-height: 44px;
+  }
+
+  header .logo.expanded img {
+    width: auto;
+    height: 100%;
+    margin: 0;
+  }
+
+  nav ul li a {
+    margin: 0 .5em;
+  }
+
+  nav ul {
+    width: auto;
+    justify-content: center;
+  }
+
+  nav ul section {
+    width: auto;
+  }
+}
+
+@media (max-width: 670px) {
+  header .logo {
+    display: none;
+  }
+
+  #recipeLink {
+    content: "MAT";
+  }
 }
 
 @media (max-width: 480px) {
