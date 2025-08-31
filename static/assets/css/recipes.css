@@ -1,0 +1,119 @@
+.top-title {
+    background: var(--background-dark) url('/static/assets/imgs/recipes_background.webp')
+              center / cover no-repeat;
+}
+
+/* Container for all recipes */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Recipe card styling */
+.recipe {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 1200px;
+  width: 100%;
+  min-height: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: none;
+}
+
+/* Text section */
+.recipe .text {
+  flex: 1 1 0;
+  padding: 2rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Image section as background */
+.recipe .image {
+  flex: 1 1 0;
+  position: relative;
+  min-width: 320px;
+  max-width: 400px;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.recipe .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+  display: block;
+}
+
+.recipe:hover img,
+.recipe .image:focus-within img {
+  transform: scale(1.08);
+}
+
+/* Details summary as button */
+.recipe details summary {
+  background: #e5e5e5;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  outline: none;
+}
+
+.recipe details summary:focus,
+.recipe details summary:hover {
+  background: #d1d1d1;
+}
+
+/* Remove default marker */
+.recipe details summary::-webkit-details-marker {
+  display: none;
+}
+.recipe details summary::marker {
+  display: none;
+}
+
+/* Details panel */
+.recipe details[open] summary {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  .recipe {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .recipe .image {
+    min-width: 100%;
+    max-width: 100%;
+    height: 220px;
+  }
+  .recipe .image img {
+    height: 100%;
+  }
+  .recipe .text {
+    padding: 1.2rem;
+  }
+}
+
+/* Spacing between cards */
+.recipe + .recipe {
+  margin-top: 2rem;
+}
