@@ -17,7 +17,7 @@ body {
 h1, h2, h3, h4, h5, h6, p, a, li, label, input {
   color: var(--text);
   /* font-family: 'Times New Roman', Times, serif; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* This is used to test a large font (yes it's hideous) */
   /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
@@ -26,7 +26,7 @@ h2 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 16px;
 }
 
 header {
@@ -122,6 +122,7 @@ main > * {
 main section.title {
   width: 50%;
   margin: 8em auto;
+  text-align: center;
 }
 
 main section.title .logo {
@@ -182,12 +183,19 @@ main article.content > section {
   justify-content: space-between;
 }
 
+.standard-p h2,
+.standard-p h3,
+.standard-p h4 {
+  margin-top: 0;
+}
+
 .standard-p > div {
   width: 45%;
 }
 
 .standard-p img {
   width: 100%;
+  min-height: 60%;
   object-fit: cover;
   height: auto;
 }
@@ -203,6 +211,7 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
 footer section {
@@ -235,20 +244,39 @@ footer section {
   nav ul section {
     width: auto;
   }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  main section.title {
+    width: 70%;
+  }
+
+  main article.content {
+    width: 90%;
+    padding: 5em 5%;
+  }
+
+  main > *, footer section {
+    width: 90%;
+  }
+
+  .standard-p > div {
+    width: 48%;
+  }
+
+  main section.floating-p > * {
+    width: 50%;
+  }
+
+  footer > section {
+    width: 30%;
+  }
 }
 
 @media (max-width: 670px) {
-  header .logo {
-    display: none;
-  }
-
-  #recipeLink {
-    content: "MAT";
-  }
-}
-
-@media (max-width: 480px) {
-  header, nav, nav ul, nav ul li, nav ul li a, nav ul section, main section.title, .standard-p > div, footer, main section.floating-p > *, main article.content {
+  header, nav, nav ul, nav ul li, nav ul li a, nav ul section {
     width: 100%;
   }
 
@@ -258,7 +286,7 @@ footer section {
     transition: max-height .3s ease-in-out;
   }
 
-  nav ul, nav ul section, .standard-p, .standard-p.reverse {
+  nav ul, nav ul section {
     flex-direction: column;
   }
 
@@ -277,64 +305,6 @@ footer section {
   .mobile-logo img {
     height: 42px;
     margin: 1px;
-  }
-
-  nav a {
-    justify-content: center;
-  }
-
-  main {
-    margin-top: 48px;
-  }
-
-  main > *, main article.content > section, footer section {
-    width: 96%;
-  }
-
-  main section.title {
-    margin: 0;
-    padding: 3em 0;
-  }
-
-  main section.floating-p > * {
-    text-align: center;
-  }
-
-  main section.floating-p > p {
-    font-size: 1em;
-  }
-
-  main article.content {
-    padding: 0;
-  }
-
-  main article.content > section {
-    margin: 0 auto;
-  }
-  
-  footer {
-    flex-direction: column;
-  }
-
-  footer section {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  footer section p {
-    margin: .5em 0;
-  }
-
-  footer section h2 {
-    margin: 1em 0;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-
-  p {
-    font-size: 1em;
   }
 
   .menu-icon {
@@ -385,5 +355,78 @@ footer section {
   header:has(#nav-toggle:checked) .menu-icon span:nth-child(3)  {
     transform: rotate(-45deg);
     top: 20px;
+  }
+
+  nav a {
+    justify-content: center;
+  }
+
+  main > *, footer section {
+    width: 96%;
+  }
+
+  main section.floating-p > * {
+    width: 100%;
+    text-align: center;
+  }
+
+  main article.content {
+    width: 96%;
+    padding: 5em 2%;
+    gap: 0;
+  }
+  
+  footer {
+    flex-direction: column;
+  }
+
+  footer section {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  footer section p {
+    margin: .5em 0;
+  }
+
+  footer section h2 {
+    margin: 1em 0;
+  }
+}
+
+@media (max-width: 480px) {
+  main section.title, .standard-p > div, footer, main section.floating-p > *, main article.content {
+    width: 100%;
+  }
+
+  .standard-p, .standard-p.reverse {
+    flex-direction: column;
+  }
+
+  main {
+    margin-top: 48px;
+  }
+
+  main section.title {
+    margin: 0;
+    padding: 3em 0;
+  }
+
+  main article.content > section {
+    width: 96%;
+    padding: 3em 0;
+    margin: 0 auto;
+  }
+
+  main section.floating-p > * {
+    text-align: center;
+  }
+
+  main article.content {
+    padding: 0;
+  }
+
+  p {
+    font-size: 1em;
   }
 }
