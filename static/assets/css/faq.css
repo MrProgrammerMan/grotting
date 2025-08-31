@@ -1,4 +1,25 @@
+:root {
+  --highlight: rgb(241, 239, 96);
+  --highlight-transparent: rgba(241, 239, 96, 0);
+}
+
 .top-title {
     background: var(--background-dark) url('/static/assets/imgs/faq_background.webp')
               center / cover no-repeat;
+}
+
+@keyframes flash-highlight {
+  0% {
+    background-color: var(--highlight-transparent);
+  }
+  50% {
+    background-color: var(--highlight);
+  }
+  100% {
+    background-color: var(--highlight-transparent);
+  }
+}
+
+.faq:target {
+  animation: flash-highlight 1.5s ease-in-out;
 }
