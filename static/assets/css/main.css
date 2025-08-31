@@ -116,6 +116,16 @@ header .logo.expanded img {
 /* ================================
    Main Content
 ================================ */
+.top-title {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 2em 0;
+}
+
+.top-title h1 {
+    color: var(--text-light);
+}
+
 main {
   margin-top: 170px;
   width: 100%;
@@ -369,6 +379,12 @@ footer section {
 
   nav a {
     justify-content: center;
+  }
+
+  .top-title {
+    text-align: center;
+    font-size: 2em;
+    padding: 1em 0;
   }
 
   main > *, footer section {
