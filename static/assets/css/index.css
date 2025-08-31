@@ -1,0 +1,4 @@
+body {
+    background: var(--background-dark) url('/static/assets/imgs/homepage_background.webp')
+              center / cover fixed no-repeat;
+}
