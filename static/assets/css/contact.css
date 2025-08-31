@@ -1,5 +1,5 @@
 .top-title {
-    background: var(--background-dark) url('static/assets/imgs/contact_background.webp')
+    background: var(--background-dark) url('assets/imgs/contact_background.webp')
               center / cover no-repeat;
 }
 
