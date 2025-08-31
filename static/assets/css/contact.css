@@ -1,0 +1,78 @@
+.top-title {
+    background: var(--background-dark) url('/static/assets/imgs/contact_background.webp')
+              center / cover no-repeat;
+}
+
+.contact-form {
+  max-width: 700px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin: 0 auto;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  margin-top: 0.5em;
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  background: #f9f9f9;
+  resize: vertical;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  max-height: 300px;
+}
+
+.contact-form button[type="submit"] {
+  margin-top: 1em;
+  padding: 0.8em 2em;
+  background: var(--background-dark, #121212);
+  color: var(--text-light, #fff);
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-form button[type="submit"]:hover {
+  background: #333;
+}
+
+@media (max-width: 670px) {
+  .contact-form form {
+    padding: 1%;
+  }
+}
+
+@media (max-width: 480px) {
+  main article.content > section {
+    padding: 2%;
+    margin: 2em 0;
+  }
+}

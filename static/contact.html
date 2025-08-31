@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
   <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
@@ -37,7 +38,39 @@
     <input type="checkbox" id="nav-toggle" hidden>
   </header>
   <main>
-    
+    <article class="top-title">
+        <h1>Kontakt oss</h1>
+    </article>
+    <article class="content">
+      <section class="contact-form">
+        <p>Har du spørsmål? Ikke nøl med å ta kontakt!</p>
+        <form action="https://formspree.io/f/mgvlyyao" method="POST">
+          <label>
+            Navn:
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            E-post:
+            <input type="email" name="email" required>
+          </label>
+          <label for="type">
+            Hva gjelder henvendelsen?:
+            <select name="type" id="type" required>
+              <option value="placeholder" selected disabled>Velg et alternativ</option>
+              <option value="purchase">Jeg vil kjøpe kjøtt</option>
+              <option value="question">Jeg har spørsmål om driften</option>
+              <option value="business">Jeg kjøper på vegne av en bedrift</option>
+              <option value="other">Annet</option>
+            </select>
+          </label>
+          <label>
+            Din melding:
+            <textarea name="message" required minlength="10" maxlength="500"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </article>
   </main>
   <footer>
     <section>
