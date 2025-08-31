@@ -1,3 +1,6 @@
+/* ================================
+   Root Variables
+================================ */
 :root {
   --background: #fff;
   --background-dark: #121212;
@@ -5,20 +8,19 @@
   --text-light: #fff;
 }
 
+/* ================================
+   Base Styles
+================================ */
 body {
   margin: 0;
-  background-color: var(--background-dark);
-  background-image: url('/static/assets/imgs/homepage_background.webp');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: var(--background-dark) url('/static/assets/imgs/homepage_background.webp')
+              center / cover fixed no-repeat;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li, label, input {
+h1, h2, h3, h4, h5, h6,
+p, a, li, label, input {
   color: var(--text);
-  /* font-family: 'Times New Roman', Times, serif; */
-  font-family: Arial, Helvetica, sans-serif; /* This is used to test a large font (yes it's hideous) */
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -29,14 +31,16 @@ p {
   font-size: 16px;
 }
 
+/* ================================
+   Header & Navigation
+================================ */
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   position: fixed;
   top: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--background);
   z-index: 10;
 }
@@ -46,8 +50,9 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  justify-content: center;
+  list-style: none;
   margin: 0 auto;
   padding: 0;
   width: 1000px;
@@ -59,10 +64,9 @@ nav ul li {
 }
 
 nav a {
-  height: 44px;
-  padding: 0 auto;
   display: flex;
   align-items: center;
+  height: 44px;
   text-decoration: none;
 }
 
@@ -71,19 +75,20 @@ nav a:hover {
 }
 
 nav ul section {
-  width: 35%;
   display: flex;
   justify-content: space-around;
+  width: 35%;
 }
 
+/* --- Header Logo --- */
 header .logo {
   position: relative;
-  max-height: 44px;
-  width: 30%;
   display: flex;
   justify-content: center;
+  width: 30%;
+  max-height: 44px;
   overflow: hidden;
-  transition: max-height .1s ease-in-out;
+  transition: max-height 0.1s ease-in-out;
 }
 
 header .logo img {
@@ -109,6 +114,9 @@ header .logo.expanded img {
   display: none;
 }
 
+/* ================================
+   Main Content
+================================ */
 main {
   margin-top: 170px;
   width: 100%;
@@ -119,6 +127,7 @@ main > * {
   margin: 0 auto;
 }
 
+/* --- Title Section --- */
 main section.title {
   width: 50%;
   margin: 8em auto;
@@ -131,12 +140,13 @@ main section.title .logo {
 }
 
 main section.title p {
-  font-size: 2em;
   margin-top: 1em;
+  font-size: 2em;
   color: var(--text-light);
   text-shadow: 2px 2px #00000080;
 }
 
+/* --- Floating Paragraphs --- */
 main section.floating-p {
   width: 100%;
   margin: 40vh 0;
@@ -152,8 +162,8 @@ main section.floating-p > p {
 }
 
 main section.floating-p > h2 {
-  font-size: 2em;
   margin-bottom: 0.5em;
+  font-size: 2em;
 }
 
 main section.floating-p.left > * {
@@ -164,22 +174,23 @@ main section.floating-p.right > * {
   margin-left: auto;
 }
 
+/* --- Content Article --- */
 main article.content {
   width: 80%;
   padding: 5em 10%;
-  background-color: var(--background);
   display: flex;
   flex-direction: column;
   gap: 4em;
+  background-color: var(--background);
 }
 
 main article.content > section {
   width: 100%;
 }
 
+/* --- Standard Paragraph Section --- */
 .standard-p {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -195,32 +206,39 @@ main article.content > section {
 
 .standard-p img {
   width: 100%;
+  height: auto;
   min-height: 60%;
   object-fit: cover;
-  height: auto;
 }
 
 .standard-p.reverse {
   flex-direction: row-reverse;
 }
 
+/* ================================
+   Footer
+================================ */
 footer {
-  width: 100%;
-  background-color: var(--background);
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  width: 100%;
   text-align: center;
+  background-color: var(--background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 footer section {
-  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 25%;
 }
 
+/* ================================
+   Media Queries
+================================ */
+
+/* --- Tablet Landscape (≤ 1079px) --- */
 @media (max-width: 1079px) {
   header .logo.expanded {
     max-height: 44px;
@@ -232,13 +250,12 @@ footer section {
     margin: 0;
   }
 
-  nav ul li a {
-    margin: 0 .5em;
-  }
-
   nav ul {
     width: auto;
-    justify-content: center;
+  }
+
+  nav ul li a {
+    margin: 0 0.5em;
   }
 
   nav ul section {
@@ -275,15 +292,18 @@ footer section {
   }
 }
 
+/* --- Tablet Portrait / Small Screens (≤ 670px) --- */
 @media (max-width: 670px) {
-  header, nav, nav ul, nav ul li, nav ul li a, nav ul section {
+  header,
+  nav, nav ul, nav ul li,
+  nav ul li a, nav ul section {
     width: 100%;
   }
 
   header {
     max-height: 44px;
     overflow: hidden;
-    transition: max-height .3s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
   }
 
   nav ul, nav ul section {
@@ -295,11 +315,10 @@ footer section {
   }
 
   .mobile-logo {
-    display: block;
-    height: 44px;
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 44px;
   }
 
   .mobile-logo img {
@@ -317,44 +336,36 @@ footer section {
   }
 
   .menu-icon > span {
-    display: inline-block;
     position: fixed;
-    background-color: black;
+    right: 3px;
+    display: inline-block;
     width: 38px;
     height: 4px;
-    right: 3px;
     border-radius: 2px;
-    transition: all .3s ease-in-out;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
   }
 
-  .menu-icon span:nth-child(1) {
-    top: 9px;
-  }
-
-  .menu-icon span:nth-child(2) {
-    top: 20px;
-  }
-
-  .menu-icon span:nth-child(3) {
-    top: 31px;
-  }
+  .menu-icon span:nth-child(1) { top: 9px; }
+  .menu-icon span:nth-child(2) { top: 20px; }
+  .menu-icon span:nth-child(3) { top: 31px; }
 
   header:has(#nav-toggle:checked) {
     max-height: 350px;
   }
 
-  header:has(#nav-toggle:checked) .menu-icon span:nth-child(1)  {
-    transform: rotate(45deg);
+  header:has(#nav-toggle:checked) .menu-icon span:nth-child(1) {
     top: 20px;
+    transform: rotate(45deg);
   }
 
-  header:has(#nav-toggle:checked) .menu-icon span:nth-child(2)  {
+  header:has(#nav-toggle:checked) .menu-icon span:nth-child(2) {
     opacity: 0;
   }
 
-  header:has(#nav-toggle:checked) .menu-icon span:nth-child(3)  {
-    transform: rotate(-45deg);
+  header:has(#nav-toggle:checked) .menu-icon span:nth-child(3) {
     top: 20px;
+    transform: rotate(-45deg);
   }
 
   nav a {
@@ -375,7 +386,7 @@ footer section {
     padding: 5em 2%;
     gap: 0;
   }
-  
+
   footer {
     flex-direction: column;
   }
@@ -385,45 +396,52 @@ footer section {
     text-align: center;
   }
 
-  footer section p {
-    margin: .5em 0;
-  }
-
   footer section h2 {
     margin: 1em 0;
   }
+
+  footer section p {
+    margin: 0.5em 0;
+  }
 }
 
+/* --- Mobile (≤ 480px) --- */
 @media (max-width: 480px) {
-  main section.title, .standard-p > div, footer, main section.floating-p > *, main article.content {
-    width: 100%;
-  }
-
-  .standard-p, .standard-p.reverse {
-    flex-direction: column;
-  }
-
   main {
     margin-top: 48px;
   }
 
   main section.title {
+    width: 100%;
     margin: 0;
     padding: 3em 0;
   }
 
-  main article.content > section {
-    width: 96%;
-    padding: 3em 0;
-    margin: 0 auto;
+  main section.title,
+  .standard-p > div,
+  footer,
+  main section.floating-p > *,
+  main article.content {
+    width: 100%;
   }
 
-  main section.floating-p > * {
-    text-align: center;
+  .standard-p,
+  .standard-p.reverse {
+    flex-direction: column;
   }
 
   main article.content {
     padding: 0;
+  }
+
+  main article.content > section {
+    width: 96%;
+    margin: 0 auto;
+    padding: 3em 0;
+  }
+
+  main section.floating-p > * {
+    text-align: center;
   }
 
   p {
