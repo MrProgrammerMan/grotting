@@ -1,4 +1,4 @@
 .top-title {
-    background: var(--background-dark) url('/static/assets/imgs/the_deer_background.webp')
+    background: var(--background-dark) url('/static/assets/imgs/the_deer_background.png')
               center / cover no-repeat;
-}
+} 
