@@ -1,4 +1,4 @@
 body {
-    background: var(--background-dark) url('/static/assets/imgs/homepage_background.png')
+    background: var(--background-dark) url('static/assets/imgs/homepage_background.png')
               center / cover fixed no-repeat;
 }
