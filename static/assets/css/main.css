@@ -233,7 +233,7 @@ footer {
   width: 100%;
   text-align: center;
   background-color: var(--background);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
 
 footer section {
