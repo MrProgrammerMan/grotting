@@ -1,4 +1,44 @@
+/* ...existing code... */
 .top-title {
     background: var(--background-dark) url('../imgs/products_background.jpg')
               center / cover no-repeat;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 3em 2vw;
+    align-items: stretch;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.product-card {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card h2,
+.product-card p {
+    margin: .5em 1em;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1em;
 }
