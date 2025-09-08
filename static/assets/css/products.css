@@ -42,3 +42,24 @@
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 1em;
 }
+
+@media (max-width: 1079px) {
+    .products-grid {
+        width: 96%;
+        padding: 1em 0;
+        gap: 1em;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 670px) {
+    .products-grid {
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    .product-card {
+        width: 96%;
+        margin: 0 auto;
+    }
+}
