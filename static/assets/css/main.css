@@ -229,6 +229,10 @@ footer section {
 
 /* --- Tablet Landscape (≤ 1079px) --- */
 @media (max-width: 1079px) {
+  main {
+    margin-top: 48px;
+  }
+
   header .logo.expanded {
     max-height: 44px;
   }
@@ -393,10 +397,6 @@ footer section {
 
 /* --- Mobile (≤ 480px) --- */
 @media (max-width: 480px) {
-  main {
-    margin-top: 48px;
-  }
-
   main section.title {
     width: 100%;
     margin: 0;
