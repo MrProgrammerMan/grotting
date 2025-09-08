@@ -272,10 +272,6 @@ footer section {
     width: 48%;
   }
 
-  main section.floating-p > * {
-    width: 50%;
-  }
-
   footer > section {
     width: 30%;
   }
@@ -371,11 +367,6 @@ footer section {
     width: 96%;
   }
 
-  main section.floating-p > * {
-    width: 100%;
-    text-align: center;
-  }
-
   main article.content {
     width: 96%;
     padding: 5em 2%;
@@ -415,7 +406,6 @@ footer section {
   main section.title,
   .standard-p > div,
   footer,
-  main section.floating-p > *,
   main article.content {
     width: 100%;
   }
@@ -433,10 +423,6 @@ footer section {
     width: 96%;
     margin: 0 auto;
     padding: 3em 0;
-  }
-
-  main section.floating-p > * {
-    text-align: center;
   }
 
   p {

@@ -38,3 +38,23 @@ main section.floating-p a {
 main section.floating-p a:hover {
     color: var(--link-highlight);
 }
+
+@media (max-width: 1079px) {
+  main section.floating-p > * {
+    width: 50%;
+  }
+}
+
+@media (max-width: 670px) {
+  main section.floating-p > * {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  main section.floating-p > * {
+    width: 100%;
+    text-align: center;
+  }
+}
