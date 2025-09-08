@@ -30,3 +30,11 @@ main section.floating-p > h2 {
   margin-bottom: 0.5em;
   font-size: 2em;
 }
+
+main section.floating-p a {
+    color: var(--text-light);
+}
+
+main section.floating-p a:hover {
+    color: var(--link-highlight);
+}
