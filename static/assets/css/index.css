@@ -9,10 +9,13 @@ main section.floating-p {
   margin: 40vh 0;
 }
 
-main section.floating-p > p {
-  font-size: 1.5em;
+main section.floating-p > * {
   width: 30%;
   color: var(--text-light);
+}
+
+main section.floating-p > p {
+  font-size: 1.5em;
 }
 
 main section.floating-p.left > * {
@@ -21,4 +24,9 @@ main section.floating-p.left > * {
 
 main section.floating-p.right > * {
   margin-left: auto;
+}
+
+main section.floating-p > h2 {
+  margin-bottom: 0.5em;
+  font-size: 2em;
 }
