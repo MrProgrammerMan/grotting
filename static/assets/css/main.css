@@ -162,34 +162,6 @@ main section.title p {
   text-shadow: 2px 2px #00000080;
 }
 
-/* --- Floating Paragraphs --- */
-main section.floating-p {
-  width: 100%;
-  margin: 40vh 0;
-}
-
-main section.floating-p > * {
-  width: 30%;
-  color: var(--text-light);
-}
-
-main section.floating-p > p {
-  font-size: 1.5em;
-}
-
-main section.floating-p > h2 {
-  margin-bottom: 0.5em;
-  font-size: 2em;
-}
-
-main section.floating-p.left > * {
-  margin-right: auto;
-}
-
-main section.floating-p.right > * {
-  margin-left: auto;
-}
-
 /* --- Content Article --- */
 main article.content {
   width: 80%;

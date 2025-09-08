@@ -2,3 +2,23 @@ body {
     background: var(--background-dark) url('../imgs/homepage_background.png')
               center / cover fixed no-repeat;
 }
+
+/* --- Floating Paragraphs --- */
+main section.floating-p {
+  width: 100%;
+  margin: 40vh 0;
+}
+
+main section.floating-p > p {
+  font-size: 1.5em;
+  width: 30%;
+  color: var(--text-light);
+}
+
+main section.floating-p.left > * {
+  margin-right: auto;
+}
+
+main section.floating-p.right > * {
+  margin-left: auto;
+}
