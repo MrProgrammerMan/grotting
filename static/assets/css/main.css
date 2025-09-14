@@ -132,6 +132,7 @@ header .logo.expanded img {
 
 .top-title h1 {
     color: var(--text-light);
+    text-shadow: 0 0 6px #00000085;
 }
 
 main {

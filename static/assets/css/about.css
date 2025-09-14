@@ -1,4 +1,4 @@
 .top-title {
-    background: var(--background-dark) url('../imgs/about_background.webp')
+    background: var(--background-dark) url('../imgs/about_background.jpg')
               center / cover no-repeat;
 }
