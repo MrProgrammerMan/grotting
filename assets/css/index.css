@@ -1,6 +1,12 @@
 body {
     background: var(--background-dark) url('../imgs/homepage_background.png')
-              center / cover fixed no-repeat;
+              center / cover scroll no-repeat;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-attachment: fixed;
+    }
 }
 
 /* --- Floating Paragraphs --- */
