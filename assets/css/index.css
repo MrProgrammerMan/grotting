@@ -3,11 +3,6 @@ body {
               center / cover scroll no-repeat;
 }
 
-@media (min-width: 768px) {
-    body {
-        background-attachment: fixed;
-    }
-}
 
 /* --- Floating Paragraphs --- */
 main section.floating-p {
