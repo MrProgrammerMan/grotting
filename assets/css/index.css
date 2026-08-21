@@ -1,6 +1,19 @@
-body {
-    background: var(--background-dark) url('../imgs/homepage_background.png')
-              center / cover scroll no-repeat;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: var(--background-dark);
+  background-image: url('../imgs/homepage_background.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
 /* --- Floating Paragraphs --- */
