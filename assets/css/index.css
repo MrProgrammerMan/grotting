@@ -1,6 +1,6 @@
 body {
     background: var(--background-dark) url('../imgs/homepage_background.png')
-              center / cover fixed scroll no-repeat;
+              center / cover scroll no-repeat;
 }
 
 /* --- Floating Paragraphs --- */
